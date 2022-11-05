@@ -19,8 +19,6 @@ public class AnimalFactoryTest {
         String expName = "Ritter";
         Date date = new Date();
         Dog dog = af.createDog(expName, date);
-        String actName = dog.getName();
-        Assert.assertEquals(expName, actName);
     }
     //TODO - Create Test for `Animal createCat(String name, Date birthDate)`
     @Test
@@ -28,5 +26,7 @@ public class AnimalFactoryTest {
         String expName = "Sheba";
         Date date = new Date();
         Cat cat = af.createCat(expName, date);
+        String actName = cat.getName();
+        Assert.assertEquals(expName, actName);
     }
 }

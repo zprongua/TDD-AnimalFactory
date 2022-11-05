@@ -56,7 +56,7 @@ public class DogHouseTest {
         DogHouse dh = new DogHouse();
         dh.add(dog);
         Integer exp = dh.getNumberOfDogs() - 1;
-        dh.remove(42);
+        dh.remove(dog);
         Integer noc = dh.getNumberOfDogs();
         Assert.assertEquals(exp, noc);
     }
