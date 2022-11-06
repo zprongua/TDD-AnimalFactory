@@ -16,6 +16,7 @@ public class CatHouseTest {
     public void testAddCat() {
         Cat cat = new Cat("Steve", new Date(), 42);
         CatHouse ch = new CatHouse();
+        ch.clear();
         Integer exp = ch.getNumberOfCats() + 1;
         ch.add(cat);
         Integer noc = ch.getNumberOfCats();
@@ -39,7 +40,7 @@ public class CatHouseTest {
         CatHouse ch = new CatHouse();
         ch.add(cat);
         Integer exp = ch.getNumberOfCats() - 1;
-        ch.remove(42);
+        ch.remove(cat);
         Integer noc = ch.getNumberOfCats();
         Assert.assertEquals(exp, noc);
     }
